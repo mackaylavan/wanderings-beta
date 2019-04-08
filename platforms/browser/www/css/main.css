@@ -1,0 +1,355 @@
+/*************** BASE STYLES ******************/
+html{
+    font-size: 18px;
+}
+
+#footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+button {
+    color: #ffffff;
+    background: none;
+}
+
+i {
+    padding: 10px;
+}
+.ui-page-theme-a .ui-bar-inherit{
+    background:none;
+    border: none;
+    color:#ffffff;
+}
+.ui-page-theme-a .ui-btn:hover{
+    background: none;
+}
+.ui-radio{
+    margin: 0;
+}
+
+.ui-mobile label{
+    padding: 0;
+}
+i.fas.fa-laugh-beam{
+    color:#272760;
+}
+
+/**---------- HOMEPAGE -------------**/
+#homepage{
+    background: url(../media/landing-page.png) #12216E center no-repeat;
+    background-size: cover;
+}
+h1{
+    text-align: center;
+    padding: 25px;
+    color: #ffffff;
+    text-shadow: 0 3px 2px #7E63AA;
+    font-size: 3em;
+}
+#homepage #launch{
+    font-size: 2em;
+    color: #ffffff;
+    background: #B2D8DC;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 20px auto;
+}
+
+
+/**----------- MAIN MENU --------------**/
+#main-menu {
+    background: url(../media/laby-bg.png) #7593CC center no-repeat;
+    background-size: cover;
+}
+.ui-page-theme-a .ui-btn {
+    background:none;
+    border:none;
+}
+.ui-shadow{
+    box-shadow: none;
+}
+#laby-circle {
+    max-width: 100%;
+    margin: 0 auto;
+}
+#main-menu .ui-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width:90%;
+}
+#main-menu i{
+    bottom: 0;
+    width: 40%;
+    font-size: 5em;
+    color: #ffffff;
+    text-shadow: 0 3px 2px #B2D8DC;
+}
+
+/**----------- TUTORIAL --------------**/
+#tutorial .x,
+#tutorial .upper-nav {
+    font-size: 3em; 
+    color: #ffffff;
+    padding: 10px;
+    text-shadow: 0 3px 2px #B2D8DC;
+}
+#tutorial #tutorial-video{
+  width:100%;
+}
+#tut-controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #97cceb;
+    margin: 100px auto 0px;
+
+}
+#tutorial i.fas.fa-play-circle{
+    bottom: 0;
+    font-size: 4em;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0 3px 2px #B2D8DC;
+    padding: 0px;
+}
+#tutorial .continue {
+    font-size: 1.5em;
+    text-align: center;
+    color: #ffffff;
+    background: #B2D8DC;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+   
+}
+
+#tutorialPlay, 
+#labyPlay{
+    width: 100%;
+}
+
+/**----------- LABYRINTH --------------**/
+#labyrinth .x,
+#labyrinth .upper-nav {
+    font-size: 3em; 
+    color: #ffffff;
+    padding: 10px;
+    text-shadow: 0 3px 2px #B2D8DC;
+}
+#labyrinth #labyrinth-video{
+    width: 100%; 
+}
+#labyrinth i.fas.fa-play-circle, 
+#labyrinth i.fas.fa-pause-circle {
+    bottom: 0;
+    font-size: 4em;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0 3px 2px #B2D8DC;
+}
+
+#labyPlay .ui-shadow {
+    box-shadow: none;
+
+}
+
+#info {
+    background: url(../media/reflection-bg.png) #B2D8DC center no-repeat;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1em;
+    padding: 100px 20px;
+}
+#laby-controls {
+    background-color: #97CCEB;
+}
+
+/**--------------- REFLECTION -----------------**/ 
+#reflection {
+    background: url(../media/reflection-bg.png) #B2D8DC center no-repeat;
+    background-size: cover;
+
+}
+#reflection .x {
+    font-size: 3em; 
+    color: #ffffff;
+    padding: 10px;
+    text-shadow: 0 3px 2px #B2D8DC;
+}
+#reflection i.fas.fa-user-circle{
+    font-size: 7em; 
+    color: #ffffff;
+    margin: 0 auto; 
+    text-align: center;
+    text-shadow: 0 3px 2px #B2D8DC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0px 25px;
+}
+#reflection .emotions-scale{
+    background-color:none;
+}
+#reflection .emotions-icons {
+    font-size: 3.5em; 
+    color:#ffffff; 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+} 
+#reflection i.fas.fa-meh{
+    color:#97CCEB;
+    font-size: 4em;
+    text-shadow: 0 1px 0 #97CCEB;
+}
+#reflection i.fas.fa-smile{
+    color:#7593CC;
+    font-size: 4em;
+    text-shadow: 0 1px 0 #97CCEB;
+}
+#reflection i.fas.fa-grin{
+    color:#7E63AA;
+    font-size: 4em;
+    text-shadow: 0 1px 0 #97CCEB;
+}
+#reflection i.fas.fa-laugh-beam{
+    color:#272760;
+    font-size: 4em;
+    text-shadow: 0 1px 0 #97CCEB;
+}
+#reflection .ui-input-btn {
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #97CCEB;
+}
+/* HIDE RADIO */
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* IMAGE STYLES */
+  [type=radio] + i {
+    cursor: pointer;
+  }
+  
+  /* CHECKED STYLES */
+  [type=radio]:checked + i {
+    outline: 2px solid #f00;
+  }
+  
+#reflection h3{
+   color: #ffffff;
+   border-bottom: 2px solid #97CCEB;
+   font-weight: 500;
+   text-transform: capitalize;
+}
+#reflection .home {
+    font-size: 3em; 
+    color: #ffffff;
+    padding: 10px;
+    text-shadow: 0 3px 2px #B2D8DC;
+    position: absolute;
+    margin: 0;
+}
+/**----------------- STORED REFLECTIONS ---------------------**/
+#stored-reflections {
+    background: url(../media/reflection-bg.png) #B2D8DC center no-repeat;
+    background-size: cover;
+
+}
+#stored-reflections .x {
+    font-size: 3em; 
+    color: #ffffff;
+    padding: 10px;
+    text-shadow: 0 3px 2px #B2D8DC;
+}
+#stored-reflections h2{
+    font-size:3em;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 80px;
+    margin: 0 auto;
+}
+#stored-reflections h3{
+   color: #ffffff;
+   border-bottom: 2px solid #97CCEB;
+   font-weight: 500;
+   text-transform: capitalize;
+}
+#stored-reflections p{
+    margin-bottom: 40px;
+}
+#stored-reflections #stored-emotion{
+    font-size: 4em;
+    text-shadow: 0 1px 0 #97CCEB;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+#stored-emotion i.fas.fa-meh{
+    color:#97CCEB;
+}
+#stored-emotion i.fas.fa-smile{
+    color:#7593CC;
+}
+#stored-emotion i.fas.fa-grin{
+    color:#7E63AA;
+}
+#stored-emotion i.fas.fa-laugh-beam{
+    color:#272760;
+}
+#stored-reflections .home{
+    font-size: 3em; 
+    color: #ffffff;
+    padding: 10px;
+    text-shadow: 0 3px 2px #B2D8DC;
+    position: absolute;
+    margin: 0;
+}
+/**--------------- HELP -----------------**/ 
+#help {
+    background: url(../media/reflection-bg.png) #B2D8DC center no-repeat;
+    background-size: cover;
+
+}
+#help .x {
+    font-size: 3em; 
+    color: #ffffff;
+    padding: 10px;
+    text-shadow: 0 3px 2px #B2D8DC;
+}
+#help h2{
+    color:#ffffff;
+    border-bottom: 2px solid #97CCEB;
+    margin: 100px 5px 5px 5px;
+
+}
+#help p{
+    padding: 10px;
+    text-shadow: none;
+    color: #ffffff;
+}
+#help a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #ffffff
+}
+#help .home{
+    font-size: 3em; 
+    color: #ffffff;
+    padding: 10px;
+    text-shadow: 0 3px 2px #B2D8DC;
+    position: absolute;
+    margin: 0;
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Wanderings</title>
+
+        <!-- jQuery Mobile -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <!-- FontAwesome Icons -->
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/main.css"/>
+
+        <script>
+            var playerOne;
+            var playerTwo; 
+
+            var userData;
+
+            var storedReflections = [];
+            const lastIndex = storedReflections.length - 1;
+
+            window.onload=function()
+            {
+                document.getElementById('tutorialPlay').addEventListener('click', function()
+                {
+                    playerOne = document.getElementById('tutorial-video');
+                    playerOne.play();
+                    document.getElementById("tut-controls").style.display = "none";
+                });
+                
+                document.getElementById('labyPlay').addEventListener('click', function()
+                {   document.getElementById('info').style.display = "none";
+                    document.getElementById('laby-controls').style.display = "none";
+
+                    playerTwo = document.getElementById('labyrinth-video');
+
+                    var watchID = navigator.accelerometer.watchAcceleration(success, fail, {frequency: 100});
+                
+                     function success(accel)
+                       {
+                         if(Math.abs(accel.x) > 2)
+                         {
+                             playerTwo.play();
+                         }
+
+                         else if(Math.abs(accel.x) < 1 && Math.abs(accel.y) < 1){
+                            playerTwo.pause();
+                         }
+                     }
+                    
+                    if (playerTwo.currentTime > 300000){
+                        playerTwo.style.display = "none";
+                    }
+                });
+
+                document.getElementById('submit').addEventListener('click', storeData);
+
+            }
+        
+           
+            function fail(e)
+            {
+                alert("error");
+            }
+
+            function storeData(e)
+            {
+                var userData = {
+                    emotion: document.querySelector('[name="emotion"]:checked').value,
+                    reflection: document.getElementById('notes').value,
+                    date: new Date()
+                };
+
+                storedReflections.push(userData);
+                console.log(storedReflections);
+
+                findEmotion();
+
+                document.getElementById('month').innerHTML = "Today's Session";
+        
+                document.getElementById('user-notes').innerHTML = document.getElementById('notes').value;
+            
+            }
+
+            function findEmotion(e) 
+            {
+                if (document.getElementById('meh').checked == true) {
+                    savedEmotion = document.getElementById('stored-emotion').innerHTML = "<i class='fa fa-meh'> </i>";
+                }
+                if (document.getElementById('smile').checked == true) {
+                    savedEmotion = document.getElementById('stored-emotion').innerHTML = "<i class='fa fa-smile'> </i>";
+                }
+                if (document.getElementById('grin').checked == true) {
+                    savedEmotion = document.getElementById('stored-emotion').innerHTML = "<i class='fa fa-grin'> </i>";
+                }
+                if (document.getElementById('laugh').checked == true) {
+                    savedEmotion = document.getElementById('stored-emotion').innerHTML = "<i class='fa fa-laugh-beam'> </i>";
+                }
+            }
+
+        </script>
+
+    </head>
+    <body>
+        <div data-role="page" id="homepage">
+            <div data-role="main" class="ui-content">
+                    <h1>Wanderings</h1>  
+            </div>
+            <button id="launch" onclick="location.href='index.html#main-menu'">Start<i class="fas fa-arrow-right"></i></button>
+         </div>
+
+        <div data-role="page" id="main-menu">
+            <div data-role="main" class="ui-content">
+                <button onclick="location.href='index.html#tutorial'">
+                   <img src="media/beach-circle.png" id="laby-circle">
+                </button> 
+            </div>
+            <div data-role="footer" class="ui-content" id="menu-footer">
+                <button onclick="location.href='index.html#reflection'">
+                    <i class="fas fa-user"></i> 
+                 </button> 
+                 <button id="question-icon" onclick="location.href='index.html#help'">
+                    <i class="fas fa-question-circle"></i>
+                 </button> 
+               
+            </div>
+        </div>
+
+        <div data-role="page" id="tutorial">
+            <div data-role="header">
+                <button class="x" onclick="location.href='index.html#main-menu'"><i class="fas fa-times"></i></button>
+                <button class="upper-nav" onclick="location.href='index.html#labyrinth'"><i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div data-role="main">
+                <div id="tut-controls">
+                    <button id="tutorialPlay"><h2>Start</h2><i class="fas fa-play-circle"></i></button>
+                </div>
+                <video id="tutorial-video">
+                    <source src="media/small-tutorial.mp4">
+                </video>
+        
+                <button class="continue" onclick="location.href='index.html#labyrinth'">Continue <i class="fas fa-arrow-right"></i></button>
+       
+            </div>
+        </div>
+
+        <div data-role="page" id="labyrinth">
+            <div data-role="header">
+                <button class="x" onclick="location.href='index.html#main-menu'"><i class="fas fa-times"></i></button>
+                <button class="upper-nav" onclick="location.href='index.html#reflection'"><i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div data-role="main">
+                <div id="info">
+                    <p>Tilt your device to play the video and progress through the labyrinth.<br>Lay your device flat to pause.</p>
+                    <p>If you become distracted, simply acknowledge it and return your attention to the labyrinth.</p>
+                </div>
+                <div id="laby-controls">
+                    <button id="labyPlay">
+                        <h2>Start</h2>
+                        <i class="fas fa-play-circle"></i>
+                    </button>
+                </div>
+                <video id="labyrinth-video">
+                    <source src="media/small-beach.mp4">
+                </video>
+            </div>
+        </div>
+
+        <div data-role="page" id="reflection">
+            <div data-role="header">
+                <button class="x" onclick="location.href='index.html#main-menu'"><i class="fas fa-times"></i></button>
+            </div>
+            <div data-role="main" class="ui-content">
+                <i class="fas fa-user-circle"></i>
+
+                <div class="emotions-scale">
+                    <h3>How do you feel now?</h3>
+                    <form id="current-emotion" class="emotions-icons">
+                        <label>
+                          <input id="meh" type="radio" name="emotion" value="meh"> 
+                          <i class="fas fa-meh"></i>
+                        </label>
+                        <label>
+                          <input id="smile" type="radio" name="emotion" value="smile"> 
+                           <i class="fas fa-smile"></i>
+                        </label>
+                        <label>
+                           <input id="grin" type="radio" name="emotion" value="grin"> 
+                          <i class="fas fa-grin"></i>
+                        </label>
+                        <label>
+                          <input id="laugh" type="radio" name="emotion" value="laugh"> 
+                          <i class="fas fa-laugh-beam"></i>
+                        </label>
+                    </form>
+                </div>
+
+                <div id="form-wrapper">
+                    <form id="user-reflection">
+                        <h3>Any notes or thoughts?</h3>
+                        <input id="notes" type="text">
+                        <input id="submit" type="submit" value="submit" onclick="location.href='index.html#stored-reflections'">
+                    </form>
+                </div>
+               
+            </div>
+            
+            <div data-role="footer">
+                <button class="home" onclick="location.href='index.html#main-menu'"><i class="fas fa-home"></i></button>
+            </div>
+        </div>
+        <div data-role="page" id="stored-reflections">
+                <div data-role="header">
+                     <button class="x" onclick="location.href='index.html#main-menu'"><i class="fas fa-times"></i></button>
+                 </div>
+                 <div data-role="main" class="ui-content">
+                     <h2 id="month"></h2>
+                     <h3>Current Emotion</h3>
+                     <i id="stored-emotion"></i>
+                     <h3>Notes</h3>
+                     <p id="user-notes"></p>
+                </div> 
+                <div data-role="footer">
+                     <button class="home" onclick="location.href='index.html#main-menu'"><i class="fas fa-home"></i></button>
+                </div>
+        </div>
+
+        <div data-role="page" id="help">
+            <div data-role="header">
+                <button class="x" onclick="location.href='index.html#main-menu'"><i class="fas fa-times"></i></button>
+            </div>
+            <div data-role="main" class="ui-content">
+                <h2>About the App</h2>
+                <p>This app aims to help you experience the benefits of mindfulness practices by guiding you through breathing exercises and through the use of a virtual labyrinth.  By entering a physically relaxed state and visualizing yourself in a peaceful setting, you train your mind to associate less with feelings of stress and anxiety. </p>
+               </div>
+            <div data-role="footer">
+                <button class="home" onclick="location.href='index.html#main-menu'"><i class="fas fa-home"></i></button>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>
