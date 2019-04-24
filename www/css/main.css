@@ -143,6 +143,10 @@ h1{
     padding: 10px;
     text-shadow: 0 3px 2px #B2D8DC;
 }
+#gesture-clip{
+    width: 80%;
+    margin: 0 auto; 
+}
 #labyrinth #labyrinth-video{
     width: 100%; 
 }
