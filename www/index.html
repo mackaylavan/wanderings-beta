@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         <title>Wanderings</title>
+       
         <!-- Hammer Gestures -->
         <script src="hammer.js"></script>
         <script src="hammer-time.js"></script>
@@ -48,14 +49,17 @@
                 var gesture = document.getElementById('gesture-area');
                     var detector = new Hammer(gesture);
                     detector.on("press", function(ev){
-                        playerTwo.play();
-                    });
-
-                    detector.on("pressUp", function(ev){
+                           playerTwo.play();
+                           console.log("pressed");
+                        });
+                    detector.on("tap", function(ev){
                         playerTwo.pause();
+                        console.log("released");
                     });
-                   
 
+
+                
+                   
                 document.getElementById('submit').addEventListener('click', storeData);
 
             }
