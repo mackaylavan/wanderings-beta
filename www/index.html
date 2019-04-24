@@ -36,17 +36,20 @@
                 {
                     playerOne = document.getElementById('tutorial-video');
                     playerOne.play();
-                    document.getElementById("tut-controls").style.display = "none";
+                    document.getElementById("tut-controls").style.display = "none"; 
+                    playerOne.onended = function(){
+                        window.location.href = 'index.html#labyrinth';
+                    }
                 });
+
                 
                 document.getElementById('labyPlay').addEventListener('click', function()
                 {   document.getElementById('info').style.display = "none";
                     document.getElementById('laby-controls').style.display = "none";
 
                     playerTwo = document.getElementById('labyrinth-video');
-                
-                });
-                var gesture = document.getElementById('gesture-area');
+
+                    var gesture = document.getElementById('gesture-area');
                     var detector = new Hammer(gesture);
                     detector.on("press", function(ev){
                            playerTwo.play();
@@ -56,6 +59,14 @@
                         playerTwo.pause();
                         console.log("released");
                     });
+
+                    playerTwo.onended = function(){
+                        window.location.href = 'index.html#reflection';
+                    }
+                  });
+
+
+               
 
 
                 
@@ -158,7 +169,7 @@
             </div>
             <div data-role="main">
                 <div id="info">
-                    <p>Tilt your device to play the video and progress through the labyrinth.<br>Lay your device flat to pause.</p>
+                    <p>Press and hold anywhere on the screen to walk the labyrinth. <br>Tap to pause. </p>
                     <p>If you become distracted, simply acknowledge it and return your attention to the labyrinth.</p>
                 </div>
                 <div id="laby-controls">
