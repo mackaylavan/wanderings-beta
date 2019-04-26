@@ -42,16 +42,21 @@ i.fas.fa-laugh-beam{
     background-size: cover;
 }
 h1{
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
     text-align: center;
     padding: 25px;
     color: #ffffff;
     text-shadow: 0 3px 2px #7E63AA;
-    font-size: 3em;
+    font-size: 2.5em;
 }
 #homepage #launch{
+    font-family: 'Lato', sans-serif;
     font-size: 2em;
+    text-transform: uppercase;
     color: #ffffff;
     background: #B2D8DC;
+    opacity: 0.9;
     padding: 10px;
     position: absolute;
     bottom: 0;
@@ -65,6 +70,16 @@ h1{
     background: url(../media/laby-bg.png) #7593CC center no-repeat;
     background-size: cover;
 }
+#main-menu h3{
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
+    font-weight: 400; 
+    font-size: 2em;
+    padding: 10px;
+    text-shadow: none;
+    text-align: center;
+    margin: 20px auto;
+}
 .ui-page-theme-a .ui-btn {
     background:none;
     border:none;
@@ -73,7 +88,7 @@ h1{
     box-shadow: none;
 }
 #laby-circle {
-    max-width: 100%;
+
     margin: 0 auto;
 }
 #main-menu .ui-footer{
@@ -89,16 +104,19 @@ h1{
     width: 40%;
     font-size: 5em;
     color: #ffffff;
-    text-shadow: 0 3px 2px #B2D8DC;
+    text-shadow: 0 3px 2px #7593CC;
 }
 
 /**----------- TUTORIAL --------------**/
+#tut-nav{
+    background-color: #97CCEB;
+}
 #tutorial .x,
 #tutorial .upper-nav {
     font-size: 3em; 
     color: #ffffff;
     padding: 10px;
-    text-shadow: 0 3px 2px #B2D8DC;
+    text-shadow: 0 3px 2px #7593CC;
 }
 #tutorial #tutorial-video{
   width:100%;
@@ -113,10 +131,10 @@ h1{
 }
 #tutorial i.fas.fa-play-circle{
     bottom: 0;
-    font-size: 4em;
+    font-size: 2.5em;
     color: #ffffff;
     text-align: center;
-    text-shadow: 0 3px 2px #B2D8DC;
+    text-shadow: 0 3px 2px #7593CC;
     padding: 0px;
 }
 #tutorial .continue {
@@ -132,7 +150,16 @@ h1{
 
 #tutorialPlay, 
 #labyPlay{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3em;
+    color: #ffffff;
+    text-shadow: none;
+    text-transform: uppercase;
+    opacity: 0.9
 }
 
 /**----------- LABYRINTH --------------**/
@@ -141,7 +168,7 @@ h1{
     font-size: 3em; 
     color: #ffffff;
     padding: 10px;
-    text-shadow: 0 3px 2px #B2D8DC;
+    text-shadow: 0 3px 2px #7593CC;
 }
 #gesture-clip{
     width: 80%;
@@ -150,13 +177,13 @@ h1{
 #labyrinth #labyrinth-video{
     width: 100%; 
 }
-#labyrinth i.fas.fa-play-circle, 
-#labyrinth i.fas.fa-pause-circle {
+#labyrinth i.fas.fa-play-circle {
     bottom: 0;
-    font-size: 4em;
+    font-size: 2.5em;
     color: #ffffff;
     text-align: center;
-    text-shadow: 0 3px 2px #B2D8DC;
+    text-shadow: 0 3px 2px #7593CC;
+    padding: 0px;
 }
 
 #labyPlay .ui-shadow {
@@ -164,15 +191,29 @@ h1{
 
 }
 
+#gesture-gif{
+    max-width: 30%;
+    opacity: 1;
+}
 #info {
-    background: url(../media/reflection-bg.png) #B2D8DC center no-repeat;
+    background-color: #747FAB;
     text-align: center;
+    text-shadow: none;
+    line-height: 1.5em;
     color: #ffffff;
     font-size: 1em;
-    padding: 100px 20px;
+    padding: 100px 20px 40px;
+   
 }
 #laby-controls {
     background-color: #97CCEB;
+}
+#labyPlay {
+    margin: 0; 
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    text-shadow: none;
 }
 
 /**--------------- REFLECTION -----------------**/ 
@@ -185,14 +226,14 @@ h1{
     font-size: 3em; 
     color: #ffffff;
     padding: 10px;
-    text-shadow: 0 3px 2px #B2D8DC;
+    text-shadow: 0 3px 2px #7593CC;
 }
 #reflection i.fas.fa-user-circle{
-    font-size: 7em; 
+    font-size: 5em; 
     color: #ffffff;
     margin: 0 auto; 
     text-align: center;
-    text-shadow: 0 3px 2px #B2D8DC;
+    text-shadow: 0 3px 2px #7593CC;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,27 +253,31 @@ h1{
 #reflection i.fas.fa-meh{
     color:#97CCEB;
     font-size: 4em;
-    text-shadow: 0 1px 0 #97CCEB;
+    text-shadow: 0 1px 0 #7593CC;
 }
 #reflection i.fas.fa-smile{
     color:#7593CC;
     font-size: 4em;
-    text-shadow: 0 1px 0 #97CCEB;
+    text-shadow: 0 1px 0 #7593CC;
 }
 #reflection i.fas.fa-grin{
     color:#7E63AA;
     font-size: 4em;
-    text-shadow: 0 1px 0 #97CCEB;
+    text-shadow: 0 1px 0 #7593cc;
 }
 #reflection i.fas.fa-laugh-beam{
     color:#272760;
     font-size: 4em;
-    text-shadow: 0 1px 0 #97CCEB;
+    text-shadow: 0 1px 0 #7593CC;
 }
 #reflection .ui-input-btn {
     color: #ffffff;
     text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
     background-color: #97CCEB;
+    font-size: 1.3em;
+    text-shadow: none;
+
 }
 /* HIDE RADIO */
 [type=radio] { 
@@ -254,15 +299,17 @@ h1{
   
 #reflection h3{
    color: #ffffff;
+   font-family: 'Lato', sans-serif;
    border-bottom: 2px solid #97CCEB;
-   font-weight: 500;
-   text-transform: capitalize;
+   font-weight: 400;
+   text-shadow: none;
 }
+   
 #reflection .home {
     font-size: 3em; 
     color: #ffffff;
     padding: 10px;
-    text-shadow: 0 3px 2px #B2D8DC;
+    text-shadow: 0 3px 2px #7593CC;
     position: absolute;
     margin: 0;
 }
@@ -276,9 +323,11 @@ h1{
     font-size: 3em; 
     color: #ffffff;
     padding: 10px;
-    text-shadow: 0 3px 2px #B2D8DC;
+    text-shadow: 0 3px 2px #7593CC;
 }
 #stored-reflections h2{
+    font-family: 'Lato', sans-serif;
+    text-shadow: none;
     font-size:3em;
     color: #ffffff;
     text-align: center;
@@ -286,17 +335,21 @@ h1{
     margin: 0 auto;
 }
 #stored-reflections h3{
+    font-family: 'Lato', sans-serif;
+    text-shadow: none;
    color: #ffffff;
    border-bottom: 2px solid #97CCEB;
    font-weight: 500;
    text-transform: capitalize;
 }
 #stored-reflections p{
+    font-family: 'Lato', sans-serif;
+    text-shadow: none;
     margin-bottom: 40px;
 }
 #stored-reflections #stored-emotion{
     font-size: 4em;
-    text-shadow: 0 1px 0 #97CCEB;
+    text-shadow: 0 1px 0 #7593CC;
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -317,7 +370,7 @@ h1{
     font-size: 3em; 
     color: #ffffff;
     padding: 10px;
-    text-shadow: 0 3px 2px #B2D8DC;
+    text-shadow: 0 3px 2px #7593CC;
     position: absolute;
     margin: 0;
 }
@@ -331,7 +384,7 @@ h1{
     font-size: 3em; 
     color: #ffffff;
     padding: 10px;
-    text-shadow: 0 3px 2px #B2D8DC;
+    text-shadow: 0 3px 2px #7593cC;
 }
 #help h2{
     color:#ffffff;
@@ -353,7 +406,7 @@ h1{
     font-size: 3em; 
     color: #ffffff;
     padding: 10px;
-    text-shadow: 0 3px 2px #B2D8DC;
+    text-shadow: 0 3px 2px #7593CC;
     position: absolute;
     margin: 0;
 }

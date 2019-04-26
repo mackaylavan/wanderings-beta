@@ -21,6 +21,9 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/main.css"/>
 
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+
         <script>
             var playerOne;
             var playerTwo; 
@@ -32,11 +35,14 @@
 
             window.onload=function()
             {
+                animate();
+
                 document.getElementById('tutorialPlay').addEventListener('click', function()
                 {
                     playerOne = document.getElementById('tutorial-video');
                     playerOne.play();
                     document.getElementById("tut-controls").style.display = "none"; 
+                    document.getElementById('tut-nav').style.display = "none";
                     playerOne.onended = function(){
                         window.location.href = 'index.html#labyrinth';
                     }
@@ -65,16 +71,31 @@
                     }
                   });
 
-
-               
-
-
-                
                    
                 document.getElementById('submit').addEventListener('click', storeData);
 
             }
-        
+                
+            function animate()
+            {
+                var elem = document.getElementById('laby-circle');
+                var width = 80;
+                var id = setInterval(grow, 50);
+                    function grow()
+                    {
+                        if (width == 100){
+                            clearInterval(id);
+                           // animate();
+                        }
+                        else {
+                            width++;
+                            elem.style.maxWidth = width + '%';
+                            console.log(width);
+                        }
+                        
+                    }
+                    
+            }
            
             function fail(e)
             {
@@ -129,6 +150,7 @@
 
         <div data-role="page" id="main-menu">
             <div data-role="main" class="ui-content">
+                <h3>Start your journey</h3>
                 <button onclick="location.href='index.html#tutorial'">
                    <img src="media/beach-circle.png" id="laby-circle">
                 </button> 
@@ -145,7 +167,7 @@
         </div>
 
         <div data-role="page" id="tutorial">
-            <div data-role="header">
+            <div id="tut-nav" data-role="header">
                 <button class="x" onclick="location.href='index.html#main-menu'"><i class="fas fa-times"></i></button>
                 <button class="upper-nav" onclick="location.href='index.html#labyrinth'"><i class="fas fa-arrow-right"></i></button>
             </div>
@@ -165,13 +187,11 @@
         <div data-role="page" id="labyrinth">
             <div data-role="header">
                 <button class="x" onclick="location.href='index.html#main-menu'"><i class="fas fa-times"></i></button>
-                <button class="upper-nav" onclick="location.href='index.html#reflection'"><i class="fas fa-arrow-right"></i></button>
+                
             </div>
             <div data-role="main">
                 <div id="info">
-                    <video id="gesture-clip" autoplay loop muted playsinline>
-                        <source src="media/TapGestures.mp4">
-                    </video>
+                    <img id="gesture-gif" src="media/TapGesture.gif">
                     <p>Press and hold anywhere on the screen to walk the labyrinth. <br>Tap to pause. </p>
                     <p>If you become distracted, simply acknowledge it and return your attention to the path.</p>
                 </div>
