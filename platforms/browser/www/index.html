@@ -35,7 +35,28 @@
 
             window.onload=function()
             {
+
+           
                 animate();
+
+                document.getElementById('start-circle').addEventListener('click', function ()
+                {
+                    window.location.href = 'index.html#tutorial';
+
+                    playerOne.style.display = 'block';
+                    playerOne = document.getElementById('tutorial-video');
+                    playerOne.currentTime = 0;
+
+                    playerTwo.style.display = 'block';
+                    playerTwo = document.getElementById('labyrinth-video');
+                    playerTwo.currentTime = 0;
+
+                    document.getElementById("tut-controls").style.display = "flex"; 
+                    document.getElementById('tut-nav').style.display = "flex";
+
+                    document.getElementById('info').style.display = "block";
+                    document.getElementById('laby-controls').style.display = "block";
+                });
 
                 document.getElementById('tutorialPlay').addEventListener('click', function()
                 {
@@ -43,9 +64,12 @@
                     playerOne.play();
                     document.getElementById("tut-controls").style.display = "none"; 
                     document.getElementById('tut-nav').style.display = "none";
+ 
                     playerOne.onended = function(){
                         window.location.href = 'index.html#labyrinth';
+                        playerOne.style.display = 'none';
                     }
+            
                 });
 
                 
@@ -68,6 +92,8 @@
 
                     playerTwo.onended = function(){
                         window.location.href = 'index.html#reflection';
+                        playerTwo.style.display = 'none';
+                       
                     }
                   });
 
@@ -85,7 +111,7 @@
                     {
                         if (width == 100){
                             clearInterval(id);
-                           // animate();
+                            window.requestAnimationFrame(animate);
                         }
                         else {
                             width++;
@@ -151,7 +177,7 @@
         <div data-role="page" id="main-menu">
             <div data-role="main" class="ui-content">
                 <h3>Start your journey</h3>
-                <button onclick="location.href='index.html#tutorial'">
+                <button id="start-circle">
                    <img src="media/beach-circle.png" id="laby-circle">
                 </button> 
             </div>

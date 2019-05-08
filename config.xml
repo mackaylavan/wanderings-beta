@@ -7,7 +7,7 @@
     <author email="mackalavan@yahoo.com" href="http://mackaylavanbinsbergen.com">
         MacKayla van Binsbergen
     </author>
-     <icon src="media/wanderingsIcon.png" />
+     <icon src="res/icon.png" />
     <content src="index.html" />
     <access origin="*" />
 </widget>
