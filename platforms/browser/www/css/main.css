@@ -88,7 +88,6 @@ h1{
     box-shadow: none;
 }
 #laby-circle {
-
     margin: 0 auto;
 }
 #main-menu .ui-footer{
@@ -389,6 +388,7 @@ h1{
 #help h2{
     color:#ffffff;
     border-bottom: 2px solid #97CCEB;
+    text-shadow: none;
     margin: 100px 5px 5px 5px;
 
 }
@@ -409,4 +409,236 @@ h1{
     text-shadow: 0 3px 2px #7593CC;
     position: absolute;
     margin: 0;
+}
+
+@media screen and (min-width: 768px){
+    /**----------- MAIN MENU --------------**/
+#main-menu {
+    height: 700px; 
+}
+#main-menu h3{
+    font-size: 3em;
+    padding: 50px 10px;
+    text-shadow: none;
+    text-align: center;
+    margin: 20px auto;
+}
+#laby-circle {
+    margin: 0 auto;
+}
+
+#main-menu i{
+    bottom: 0;
+    width: 55%;
+    font-size: 7em;
+    color: #ffffff;
+    text-shadow: 0 5px 3px #7593cc;
+}
+#main-menu .ui-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width:90%;
+}
+/**----------- TUTORIAL --------------**/
+
+#tutorialPlay, 
+#labyPlay{
+    display: block;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-size: 2em;
+    color: #ffffff;
+    text-shadow: none;
+    text-transform: uppercase;
+    opacity: 0.9
+}
+
+/**----------- LABYRINTH --------------**/
+#labyrinth .x,
+#labyrinth .upper-nav {
+    font-size: 3em; 
+    color: #ffffff;
+    padding: 25px;
+    text-shadow: 0 3px 2px #7593CC;
+}
+
+
+#info {
+    background-color: #747FAB;
+    text-align: center;
+    text-shadow: none;
+    line-height: 2em;
+    color: #ffffff;
+    font-size: 1em;
+    padding: 100px;
+   
+}
+#info p {
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+#laby-controls {
+    background-color: #97CCEB;
+}
+#labyPlay {
+    margin: 0; 
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    text-shadow: none;
+    padding-bottom: 70px;
+}
+
+/**--------------- REFLECTION -----------------**/ 
+
+#reflection .x {
+    font-size: 3.5em; 
+ }
+#reflection i.fas.fa-user-circle{
+    font-size: 8em; 
+    color: #ffffff;
+    margin: 0 auto; 
+  
+    padding: 80px 0px 25px;
+}
+
+#reflection .emotions-icons {
+    font-size: 5em; 
+
+} 
+#reflection .ui-radio{
+    padding: 15px;
+}
+
+#reflection i.fas.fa-laugh-beam, 
+#reflection i.fas.fa-meh, 
+#reflection i.fas.fa-smile, 
+#reflection i.fas.fa-grin{
+    font-size: 7em;
+
+}
+#reflection .ui-input-text{
+    margin: 10px 50px;
+}
+#reflection .ui-input-btn {
+  
+    font-size: 1.5em;
+    text-shadow: none;
+    margin: 20px 50px;
+
+}
+/* HIDE RADIO */
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* IMAGE STYLES */
+  [type=radio] + i {
+    cursor: pointer;
+  }
+  
+  /* CHECKED STYLES */
+  [type=radio]:checked + i {
+    outline: 2px solid #f00;
+  }
+  
+#reflection h3{
+   
+   font-size: 2em;
+   border-bottom: 3px solid #97CCEB;
+   font-weight: 400;
+   text-shadow: none;
+   margin: 50px;
+}
+   
+#reflection .home {
+    font-size: 3.5em; 
+    padding: 10px;
+    text-shadow: 0 3px 2px #7593CC; 
+}
+
+/**----------------- STORED REFLECTIONS ---------------------**/
+
+#stored-reflections .x {
+    font-size: 3.5em; 
+}
+#stored-reflections h2{
+    padding: 80px 10px 50px;
+    margin: 0 auto;
+}
+#stored-reflections h3{
+   font-size: 2em;
+   border-bottom: 3px solid #97CCEB;
+   font-weight: 500;
+   text-transform: capitalize;
+   margin: 50px;
+}
+#stored-reflections p{
+    font-family: 'Lato', sans-serif;
+    text-shadow: none;
+    font-size: 1.5em;
+    margin: 50px;
+}
+#stored-reflections #stored-emotion{
+    font-size: 7em;
+    text-shadow: 0 1px 0 #7593CC;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+#stored-emotion i.fas.fa-meh{
+    color:#97CCEB;
+}
+#stored-emotion i.fas.fa-smile{
+    color:#7593CC;
+}
+#stored-emotion i.fas.fa-grin{
+    color:#7E63AA;
+}
+#stored-emotion i.fas.fa-laugh-beam{
+    color:#272760;
+}
+#stored-reflections .home{
+    font-size: 3.5em; 
+}
+/**--------------- HELP -----------------**/ 
+
+#help .x {
+    font-size: 3.5em; 
+    color: #ffffff;
+    padding: 10px;
+    text-shadow: 0 3px 2px #7593cC;
+}
+#help h2{
+    color:#ffffff;
+    font-size: 2em;
+    border-bottom: 3px solid #97CCEB;
+    margin: 150px 50px 10px;
+}
+
+#help p{
+    font-size: 1.2em;
+    padding: 10px;
+    text-shadow: none;
+    color: #ffffff;
+    margin: 20px 50px 100px;
+}
+
+#help .home{
+    font-size: 3.5em; 
+    color: #ffffff;
+    padding: 10px;
+    text-shadow: 0 3px 2px #7593CC;
+    position: absolute;
+    margin: 0;
+}
+
+
+
 }
