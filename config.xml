@@ -2,11 +2,16 @@
 <widget id="com.mackaylavanbinsbergen.wanderings" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Wanderings</name>
     <description>
-       Beta version 1 of Wanderings Mindfulness App.  
+       Wanderings is a mindfulness app centered around the visualization meditation technique and the practice of labyrinth walking.  The app aims to help you experience stress relief by guiding you through old and new techniques for mindfulness, combining meditative exercises and printed imagery to create a unique environment for relaxation.  
+
+        I created this app as my graduation project from Academie Minerva.  
     </description>
+    
     <author email="mackalavan@yahoo.com" href="http://mackaylavanbinsbergen.com">
         MacKayla van Binsbergen
     </author>
+
+
      <icon src="..platforms/browser/res/icon/ios/icon.png" />
      <icon src="res/icon.png" />
      <icon src="../res/icon.png" />
