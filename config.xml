@@ -13,6 +13,8 @@
 
     <platform name="ios">
         <icon src="res/icon/ios/icon.png" />
+        <icon src="../res/icon/ios/icon.png" />
+        
     </platform>
 
      <icon src="..platforms/browser/res/icon/ios/icon.png" />
