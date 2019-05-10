@@ -12,16 +12,25 @@
     </author>
 
     <platform name="ios">
-        <icon src="res/icon/ios/icon.png" />
-        <icon src="../res/icon/ios/icon.png" />
-        
+        <icon platform="ios" src="res/icon/ios/Icon-60@2x.png" />
+        <icon platform="ios" src="res/icon/ios/Icon-60@3x.png" />
+        <icon platform="ios" src="res/icon/ios/Icon-76.png" />
+        <icon platform="ios" src="res/icon/ios/Icon-76@2x.png" />
+        <icon platform="ios" src="res/icon/ios/Icon-83.5@2x.png" />
+        <icon platform="ios" src="res/icon/ios/Icon-Small-40.png" />
+        <icon platform="ios" src="res/icon/ios/Icon-Small-40@2x.png" />
+        <icon platform="ios" src="res/icon/ios/Icon-Small-40@3x.png" />
+       
+       <splash src="res/screen/ios/ipad-retina-splash.png" height="2048" width="1536"/>
+       <splash src="res/screen/ios/ipad-splash-non-retina.png" height="1024" width="768"/> 
+       <splash src="res/screen/ios/iphone-plus-splash.png" height="2208" width="1242" />
+       <splash src="res/screen/ios/iphone-six-splash.png" height="1334" width="750" />
+       <splash src="res/screen/ios/iphone-five-splash.png" height="1136" width="640" />
+       <splash src="res/screen/ios/iphone-four-splash.png" height="960" width="640" />
+       
     </platform>
 
-     <icon src="..platforms/browser/res/icon/ios/icon.png" />
-     <icon src="res/icon.png" />
-     <icon src="../res/icon.png" />
-     <icon src="www/icon.png"/>
-     <icon src="icon.png" />
+    
     <content src="index.html" />
     <access origin="*" />
 </widget>
