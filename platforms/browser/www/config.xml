@@ -9,6 +9,7 @@
     <author email="mackalavan@yahoo.com" href="http://mackaylavanbinsbergen.com">
         MacKayla van Binsbergen
     </author>
+     <icon src="Icon.png" />
 
     <platform name="ios">
         <icon platform="ios" src="res/icon/ios/Icon-60@2x.png" height="120" width="120" />
