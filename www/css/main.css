@@ -74,7 +74,7 @@ h1{
     font-family: 'Lato', sans-serif;
     color: #ffffff;
     font-weight: 400; 
-    font-size: 2em;
+    font-size: 1.8em;
     padding: 10px;
     text-shadow: none;
     text-align: center;
@@ -242,7 +242,7 @@ h1{
     background-color:none;
 }
 #reflection .emotions-icons {
-    font-size: 3.5em; 
+    font-size: 3em; 
     color:#ffffff; 
     display:flex;
     justify-content: center;
@@ -251,22 +251,22 @@ h1{
 } 
 #reflection i.fas.fa-meh{
     color:#97CCEB;
-    font-size: 4em;
+    font-size: 3.5em;
     text-shadow: 0 1px 0 #7593CC;
 }
 #reflection i.fas.fa-smile{
     color:#7593CC;
-    font-size: 4em;
+    font-size: 3.5em;
     text-shadow: 0 1px 0 #7593CC;
 }
 #reflection i.fas.fa-grin{
     color:#7E63AA;
-    font-size: 4em;
+    font-size: 3.5em;
     text-shadow: 0 1px 0 #7593cc;
 }
 #reflection i.fas.fa-laugh-beam{
     color:#272760;
-    font-size: 4em;
+    font-size: 3.5em;
     text-shadow: 0 1px 0 #7593CC;
 }
 #reflection .ui-input-btn {
