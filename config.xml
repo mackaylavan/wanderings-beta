@@ -20,6 +20,15 @@
         <icon platform="ios" src="platforms/browser/res/icon/ios/Icon-Small-40@2x.png" height="80" width="80"  />
         <icon platform="ios" src="platforms/browser/res/icon/ios/Icon-Small-40@3x.png" height="120" width="120" />
        
+       <icon platform="ios" src="../platforms/browser/res/icon/ios/Icon-60@2x.png" height="120" width="120" />
+        <icon platform="ios" src="../platforms/browser/res/icon/ios/Icon-60@3x.png" height="180" width="180" />
+        <icon platform="ios" src="../platforms/browser/res/icon/ios/Icon-76.png"  height="76" width="76" />
+        <icon platform="ios" src="../platforms/browser/res/icon/ios/Icon-76@2x.png" height="152" width="152" />
+        <icon platform="ios" src="../platforms/browser/res/icon/ios/Icon-83.5@2x.png" height="167" width="167" />
+        <icon platform="ios" src="../platforms/browser/res/icon/ios/Icon-Small-40.png" height="40" width="40" />
+        <icon platform="ios" src="../platforms/browser/res/icon/ios/Icon-Small-40@2x.png" height="80" width="80"  />
+        <icon platform="ios" src="../platforms/browser/res/icon/ios/Icon-Small-40@3x.png" height="120" width="120" />
+       
        <splash platform="ios" src="platforms/browser/res/screen/ios/ipad-retina-splash.png" height="2048" width="1536"/>
        <splash platform="ios" src="platforms/browser/res/screen/ios/ipad-splash-non-retina.png" height="1024" width="768"/> 
        <splash platform="ios" src="platforms/browser/res/screen/ios/iphone-plus-splash.png" height="2208" width="1242" />
