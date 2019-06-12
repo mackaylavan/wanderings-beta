@@ -65,12 +65,13 @@
                     document.getElementById('tut-nav').style.display = "none";
  
                     playerOne.onended = function(){
-                        window.location.href = 'index.html#labyrinth';
+                       // window.location.href = 'index.html#labyrinth';
+                       window.location.href = 'index.html#reflection';
                         playerOne.style.display = 'none';
                     }
             
                 });
-
+/*
                 
                 document.getElementById('labyPlay').addEventListener('click', function()
                 {   document.getElementById('info').style.display = "none";
@@ -96,7 +97,8 @@
                     }
                   });
 
-                   
+                   */
+
                 document.getElementById('submit').addEventListener('click', storeData);
 
             }
@@ -194,18 +196,23 @@
         <div data-role="page" id="tutorial">
             <div id="tut-nav" data-role="header">
                 <button class="x" onclick="location.href='index.html#main-menu'"><i class="fas fa-times"></i></button>
-                <button class="upper-nav" onclick="location.href='index.html#labyrinth'"><i class="fas fa-arrow-right"></i></button>
+                <button class="upper-nav" onclick="location.href='index.html#reflection'"><i class="fas fa-arrow-right"></i></button>
             </div>
             <div data-role="main">
                 <div id="tut-controls">
                     <button id="tutorialPlay"><h2>Start</h2><i class="fas fa-play-circle"></i></button>
                 </div>
                 <video id="tutorial-video">
-                    <source src="media/NewTutorialFull.mp4">
+                    <source src="media/WanderingsDemoVideo.mp4">
                 </video>
+
+                <button class="continue" onclick="location.href='index.html#reflection'">Continue <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+
         
-                <button class="continue" onclick="location.href='index.html#labyrinth'">Continue <i class="fas fa-arrow-right"></i></button>
-       
+           <!--  <button class="continue" onclick="location.href='index.html#labyrinth'">Continue <i class="fas fa-arrow-right"></i></button>
+      
             </div>
         </div>
 
@@ -233,7 +240,7 @@
                 </div>
             </div>
         </div>
-
+ -->     
         <div data-role="page" id="reflection">
             <div data-role="header">
                 <button class="x" onclick="location.href='index.html#main-menu'"><i class="fas fa-times"></i></button>
@@ -277,6 +284,8 @@
                 <button class="home" onclick="location.href='index.html#main-menu'"><i class="fas fa-home"></i></button>
             </div>
         </div>
+
+
         <div data-role="page" id="stored-reflections">
                 <div data-role="header">
                      <button class="x" onclick="location.href='index.html#main-menu'"><i class="fas fa-times"></i></button>
