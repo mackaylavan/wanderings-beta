@@ -42,19 +42,19 @@
                 {
                     window.location.href = 'index.html#tutorial';
 
-                    playerOne.style.display = 'block';
                     playerOne = document.getElementById('tutorial-video');
+                    playerOne.style.display = 'block';
                     playerOne.currentTime = 0;
 
-                    playerTwo.style.display = 'block';
-                    playerTwo = document.getElementById('labyrinth-video');
-                    playerTwo.currentTime = 0;
+                   // playerTwo.style.display = 'block';
+                    //playerTwo = document.getElementById('labyrinth-video');
+                   // playerTwo.currentTime = 0;
 
                     document.getElementById("tut-controls").style.display = "flex"; 
                     document.getElementById('tut-nav').style.display = "flex";
 
-                    document.getElementById('info').style.display = "block";
-                    document.getElementById('laby-controls').style.display = "block";
+                    //document.getElementById('info').style.display = "block";
+                   // document.getElementById('laby-controls').style.display = "block";
                 });
 
                 document.getElementById('tutorialPlay').addEventListener('click', function()
